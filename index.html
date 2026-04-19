@@ -112,6 +112,53 @@
         </div>
     </div>
 
+	<!-- FRIDGE -->
+    <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail4')">
+        <div class="row g-0 align-items-center">
+            <div class="col-4 p-3">
+                <img src="slike/fridge.jpg" class="img-fluid rounded" alt="Fridge">
+            </div>
+            <div class="col-8">
+                <div class="card-body">
+                    <h6 class="fw-bold">Fridge</h6>
+                    <p class="small text-muted">I guess this item is used for storing and refridgerating eggs?...</p>
+                    <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!-- DWASH -->
+    <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail5')">
+        <div class="row g-0 align-items-center">
+            <div class="col-4 p-3">
+                <img src="slike/dwash.jpg" class="img-fluid rounded" alt="Dishwasher">
+            </div>
+            <div class="col-8">
+                <div class="card-body">
+                    <h6 class="fw-bold">Dishwasher</h6>
+                    <p class="small text-muted">I guess this item is used for washing the dishes</p>
+                    <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- BIN -->
+    <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail6')">
+        <div class="row g-0 align-items-center">
+            <div class="col-4 p-3">
+                <img src="slike/bin.jpg" class="img-fluid rounded" alt="Bin">
+            </div>
+            <div class="col-8">
+                <div class="card-body">
+                    <h6 class="fw-bold">Bin</h6>
+                    <p class="small text-muted">I guess this item is used for storing trash</p>
+                    <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
     </section>
 
@@ -206,6 +253,67 @@
         </div>
         <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('checkout')">Proceed to Checkout</button>
     </section>
+
+	<section id="product-detail4" class="page-section container py-3">
+        <div class="position-relative mb-4 bg-light rounded-4 text-center p-5">
+            <button class="btn btn-dark position-absolute top-0 start-0 m-3 rounded-circle" onclick="showPage('home')"><i class="bi bi-arrow-left"></i></button>
+			<button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" 
+        style="width: 45px; height: 45px;" 
+        onclick="toggleWishlist(this)">
+    <i class="bi bi-heart fs-5"></i>
+</button>
+            <img src="slike/fridge.jpg" class="img-fluid" alt="Product4">
+        </div>
+        <h3 class="fw-bold">Fridge</h3>
+        <span class="badge bg-success-subtle text-success rounded-pill mb-3 px-3 py-2">20% Discounted</span>
+        <div class="display-5 fw-bold mb-4">$599.99</div>
+        <div class="mb-4">
+            <label class="form-label small fw-bold">Quantity</label>
+            <select class="form-select rounded-3"><option>1</option><option>2</option></select>
+        </div>
+        <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('checkout')">Proceed to Checkout</button>
+    </section>
+
+	<section id="product-detail5" class="page-section container py-3">
+        <div class="position-relative mb-4 bg-light rounded-4 text-center p-5">
+            <button class="btn btn-dark position-absolute top-0 start-0 m-3 rounded-circle" onclick="showPage('home')"><i class="bi bi-arrow-left"></i></button>
+			<button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" 
+        style="width: 45px; height: 45px;" 
+        onclick="toggleWishlist(this)">
+    <i class="bi bi-heart fs-5"></i>
+</button>
+            <img src="slike/dwash.jpg" class="img-fluid" alt="Product5">
+        </div>
+        <h3 class="fw-bold">Dishwasher</h3>
+        <span class="badge bg-success-subtle text-success rounded-pill mb-3 px-3 py-2">20% Discounted</span>
+        <div class="display-5 fw-bold mb-4">$399.99</div>
+        <div class="mb-4">
+            <label class="form-label small fw-bold">Quantity</label>
+            <select class="form-select rounded-3"><option>1</option><option>2</option></select>
+        </div>
+        <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('checkout')">Proceed to Checkout</button>
+    </section>
+
+<section id="product-detail6" class="page-section container py-3">
+        <div class="position-relative mb-4 bg-light rounded-4 text-center p-5">
+            <button class="btn btn-dark position-absolute top-0 start-0 m-3 rounded-circle" onclick="showPage('home')"><i class="bi bi-arrow-left"></i></button>
+			<button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" 
+        style="width: 45px; height: 45px;" 
+        onclick="toggleWishlist(this)">
+    <i class="bi bi-heart fs-5"></i>
+</button>
+            <img src="slike/bin.jpg" class="img-fluid" alt="Product6">
+        </div>
+        <h3 class="fw-bold">bin</h3>
+        <span class="badge bg-success-subtle text-success rounded-pill mb-3 px-3 py-2">20% Discounted</span>
+        <div class="display-5 fw-bold mb-4">$19.99</div>
+        <div class="mb-4">
+            <label class="form-label small fw-bold">Quantity</label>
+            <select class="form-select rounded-3"><option>1</option><option>2</option></select>
+        </div>
+        <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('checkout')">Proceed to Checkout</button>
+    </section>
+
 
     <section id="login" class="page-section container py-5">
         <h4 class="fw-bold mb-4">Register</h4>
