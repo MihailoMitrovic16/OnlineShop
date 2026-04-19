@@ -70,6 +70,22 @@
                             <h6 class="fw-bold">Air Fryer Sigma Pro</h6>
                             <p class="small text-muted">A healthier alternative to deep frying...</p>
                             <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
+			<div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail2')">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 p-3"><img src="slike/cooker.jpg" class="img-fluid rounded" alt="Cooker"></div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h6 class="fw-bold">Cooker pro</h6>
+                            <p class="small text-muted">I guess this item is used for cooking...</p>
+                            <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
+			<div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail3')">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 p-3"><img src="slike/pan.jpg" class="img-fluid rounded" alt="Pan"></div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h6 class="fw-bold">Pan</h6>
+                            <p class="small text-muted">I guess this item is used for making eggs?...</p>
+                            <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -122,6 +138,46 @@
         <h3 class="fw-bold">Air Fryer Sigma Pro Max</h3>
         <span class="badge bg-success-subtle text-success rounded-pill mb-3 px-3 py-2">20% Discounted</span>
         <div class="display-5 fw-bold mb-4">$67</div>
+        <div class="mb-4">
+            <label class="form-label small fw-bold">Quantity</label>
+            <select class="form-select rounded-3"><option>1</option><option>2</option></select>
+        </div>
+        <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('checkout')">Proceed to Checkout</button>
+    </section>
+						
+	    <section id="product-detail2" class="page-section container py-3">
+        <div class="position-relative mb-4 bg-light rounded-4 text-center p-5">
+            <button class="btn btn-dark position-absolute top-0 start-0 m-3 rounded-circle" onclick="showPage('home')"><i class="bi bi-arrow-left"></i></button>
+			<button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" 
+        style="width: 45px; height: 45px;" 
+        onclick="toggleWishlist(this)">
+    <i class="bi bi-heart fs-5"></i>
+</button>
+            <img src="slike/cooker.jpg" class="img-fluid" alt="Product2">
+        </div>
+        <h3 class="fw-bold">Cooker pro</h3>
+        <span class="badge bg-success-subtle text-success rounded-pill mb-3 px-3 py-2">20% Discounted</span>
+        <div class="display-5 fw-bold mb-4">$129.99</div>
+        <div class="mb-4">
+            <label class="form-label small fw-bold">Quantity</label>
+            <select class="form-select rounded-3"><option>1</option><option>2</option></select>
+        </div>
+        <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('checkout')">Proceed to Checkout</button>
+    </section>
+
+	    <section id="product-detail3" class="page-section container py-3">
+        <div class="position-relative mb-4 bg-light rounded-4 text-center p-5">
+            <button class="btn btn-dark position-absolute top-0 start-0 m-3 rounded-circle" onclick="showPage('home')"><i class="bi bi-arrow-left"></i></button>
+			<button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" 
+        style="width: 45px; height: 45px;" 
+        onclick="toggleWishlist(this)">
+    <i class="bi bi-heart fs-5"></i>
+</button>
+            <img src="slike/pan.jpg" class="img-fluid" alt="Product3">
+        </div>
+        <h3 class="fw-bold">Pan for cooking</h3>
+        <span class="badge bg-success-subtle text-success rounded-pill mb-3 px-3 py-2">20% Discounted</span>
+        <div class="display-5 fw-bold mb-4">$39.99</div>
         <div class="mb-4">
             <label class="form-label small fw-bold">Quantity</label>
             <select class="form-select rounded-3"><option>1</option><option>2</option></select>
