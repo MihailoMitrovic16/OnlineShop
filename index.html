@@ -13,19 +13,22 @@
         .splash-bg { background: linear-gradient(180deg, #E0E0E0 0%, #999999 100%); }
         .btn-dark { background-color: #262626; border: none; }
         .card { border-color: #eee; }
-		.wishlist-icon {
-    cursor: pointer;
-    transition: transform 0.2s ease, color 0.2s ease;
-    font-size: 1.5rem;
-}
-
-	.wishlist-icon:active {
-    transform: scale(1.3); /* Kratko povećanje pri kliku */
-}
-
-	.wishlist-icon.active {
-    color: #ff4d4d !important; /* Crvena boja */
-}
+        .wishlist-icon {
+            cursor: pointer;
+            transition: transform 0.2s ease, color 0.2s ease;
+            font-size: 1.5rem;
+        }
+        .wishlist-icon:active { transform: scale(1.3); }
+        .wishlist-icon.active { color: #ff4d4d !important; }
+        /* Osiguravamo da slike u karuselu imaju isti odnos stranica */
+        .carousel-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .carousel-img { height: 250px; }
+        }
     </style>
 </head>
 <body>
@@ -50,11 +53,98 @@
                 </div>
             </div>
         </nav>
+
         <div class="container py-4">
+            <div id="shopCarousel" class="carousel slide mb-5 shadow rounded-4 overflow-hidden" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#shopCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#shopCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#shopCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#shopCarousel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#shopCarousel" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#shopCarousel" data-bs-slide-to="5"></button>
+                    <button type="button" data-bs-target="#shopCarousel" data-bs-slide-to="6"></button>
+                    <button type="button" data-bs-target="#shopCarousel" data-bs-slide-to="7"></button>
+                    <button type="button" data-bs-target="#shopCarousel" data-bs-slide-to="8"></button>
+                    <button type="button" data-bs-target="#shopCarousel" data-bs-slide-to="9"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="slike/slider1-sm.jpg">
+                            <img src="slike/slider1.jpg" class="carousel-img" alt="Akcija 1">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="slike/slider2-sm.jpg">
+                            <img src="slike/slider2.jpg" class="carousel-img" alt="Akcija 2">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="slike/slider3-sm.jpg">
+                            <img src="slike/slider3.jpg" class="carousel-img" alt="Akcija 3">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="slike/slider4-sm.jpg">
+                            <img src="slike/slider4.jpg" class="carousel-img" alt="Akcija 4">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="slike/slider5-sm.jpg">
+                            <img src="slike/slider5.jpg" class="carousel-img" alt="Akcija 5">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="slike/slider6-sm.jpg">
+                            <img src="slike/slider6.jpg" class="carousel-img" alt="Akcija 6">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="slike/slider7-sm.jpg">
+                            <img src="slike/slider7.jpg" class="carousel-img" alt="Akcija 7">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="slike/slider8-sm.jpg">
+                            <img src="slike/slider8.jpg" class="carousel-img" alt="Akcija 8">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="slike/slider9-sm.jpg">
+                            <img src="slike/slider9.jpg" class="carousel-img" alt="Akcija 9">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="slike/slider10-sm.jpg">
+                            <img src="slike/slider10.jpg" class="carousel-img" alt="Akcija 10">
+                        </picture>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#shopCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#shopCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
             <div class="input-group mb-4 rounded-pill overflow-hidden border">
                 <input type="text" class="form-control border-0 px-4" placeholder="Search products">
                 <span class="input-group-text bg-white border-0"><i class="bi bi-search"></i></span>
             </div>
+
             <div class="d-flex justify-content-between align-items-end mb-4">
                 <div>
                     <h2 class="fw-bold mb-0">HOT DEALS</h2>
@@ -62,146 +152,129 @@
                 </div>
                 <i class="bi bi-cart3 fs-2"></i>
             </div>
-<div class="container py-4">
 
-    <!-- AIR FRYER -->
-    <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail')">
-        <div class="row g-0 align-items-center">
-            <div class="col-4 p-3">
-                <img src="slike/airfryer.jpg" class="img-fluid rounded" alt="Air Fryer">
+            <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail')">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 p-3">
+                        <img src="slike/airfryer.jpg" class="img-fluid rounded" alt="Air Fryer">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h6 class="fw-bold">Air Fryer Sigma Pro</h6>
+                            <p class="small text-muted">A healthier alternative to deep frying...</p>
+                            <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-8">
-                <div class="card-body">
-                    <h6 class="fw-bold">Air Fryer Sigma Pro</h6>
-                    <p class="small text-muted">A healthier alternative to deep frying...</p>
-                    <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
+
+            <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail2')">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 p-3">
+                        <img src="slike/cooker.jpg" class="img-fluid rounded" alt="Cooker">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h6 class="fw-bold">Cooker pro</h6>
+                            <p class="small text-muted">I guess this item is used for cooking...</p>
+                            <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail3')">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 p-3">
+                        <img src="slike/pan.jpg" class="img-fluid rounded" alt="Pan">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h6 class="fw-bold">Pan</h6>
+                            <p class="small text-muted">I guess this item is used for making eggs?...</p>
+                            <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail4')">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 p-3">
+                        <img src="slike/fridge.jpg" class="img-fluid rounded" alt="Fridge">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h6 class="fw-bold">Fridge</h6>
+                            <p class="small text-muted">I guess this item is used for storing...</p>
+                            <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail5')">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 p-3">
+                        <img src="slike/dwash.jpg" class="img-fluid rounded" alt="Dishwasher">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h6 class="fw-bold">Dishwasher</h6>
+                            <p class="small text-muted">I guess this item is used for washing dishes</p>
+                            <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail6')">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 p-3">
+                        <img src="slike/bin.jpg" class="img-fluid rounded" alt="Bin">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h6 class="fw-bold">Bin</h6>
+                            <p class="small text-muted">I guess this item is used for storing trash</p>
+                            <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- COOKER -->
-    <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail2')">
-        <div class="row g-0 align-items-center">
-            <div class="col-4 p-3">
-                <img src="slike/cooker.jpg" class="img-fluid rounded" alt="Cooker">
-            </div>
-            <div class="col-8">
-                <div class="card-body">
-                    <h6 class="fw-bold">Cooker pro</h6>
-                    <p class="small text-muted">I guess this item is used for cooking...</p>
-                    <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- PAN -->
-    <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail3')">
-        <div class="row g-0 align-items-center">
-            <div class="col-4 p-3">
-                <img src="slike/pan.jpg" class="img-fluid rounded" alt="Pan">
-            </div>
-            <div class="col-8">
-                <div class="card-body">
-                    <h6 class="fw-bold">Pan</h6>
-                    <p class="small text-muted">I guess this item is used for making eggs?...</p>
-                    <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-	<!-- FRIDGE -->
-    <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail4')">
-        <div class="row g-0 align-items-center">
-            <div class="col-4 p-3">
-                <img src="slike/fridge.jpg" class="img-fluid rounded" alt="Fridge">
-            </div>
-            <div class="col-8">
-                <div class="card-body">
-                    <h6 class="fw-bold">Fridge</h6>
-                    <p class="small text-muted">I guess this item is used for storing and refridgerating eggs?...</p>
-                    <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-	<!-- DWASH -->
-    <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail5')">
-        <div class="row g-0 align-items-center">
-            <div class="col-4 p-3">
-                <img src="slike/dwash.jpg" class="img-fluid rounded" alt="Dishwasher">
-            </div>
-            <div class="col-8">
-                <div class="card-body">
-                    <h6 class="fw-bold">Dishwasher</h6>
-                    <p class="small text-muted">I guess this item is used for washing the dishes</p>
-                    <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
-                </div>
-            </div>
-        </div>
-    </div>
-	<!-- BIN -->
-    <div class="card rounded-4 shadow-sm mb-3" onclick="showPage('product-detail6')">
-        <div class="row g-0 align-items-center">
-            <div class="col-4 p-3">
-                <img src="slike/bin.jpg" class="img-fluid rounded" alt="Bin">
-            </div>
-            <div class="col-8">
-                <div class="card-body">
-                    <h6 class="fw-bold">Bin</h6>
-                    <p class="small text-muted">I guess this item is used for storing trash</p>
-                    <button class="btn btn-light border btn-sm rounded-pill px-3">ADD TO CART</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
     </section>
 
     <section id="categories" class="page-section container py-4">
-    <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
-        <div>
-            <small class="text-muted">Store</small>
-            <h4 class="fw-bold">Categories</h4>
+        <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+            <div>
+                <small class="text-muted">Store</small>
+                <h4 class="fw-bold">Categories</h4>
+            </div>
+            <div class="dropdown">
+                <i class="bi bi-funnel fs-3" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;"></i>
+                <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-3" aria-labelledby="filterDropdown">
+                    <li><h6 class="dropdown-header">Sortiraj po:</h6></li>
+                    <li><a class="dropdown-item" href="#" onclick="console.log('Sortiranje po ceni...')"><i class="bi bi-sort-numeric-down me-2"></i>Sort by price</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="console.log('Sortiranje po popularnosti...')"><i class="bi bi-fire me-2"></i>Sort by popularity</a></li>
+                </ul>
+            </div>
         </div>
-        
-        <div class="dropdown">
-            <i class="bi bi-funnel fs-3" 
-               id="filterDropdown" 
-               data-bs-toggle="dropdown" 
-               aria-expanded="false" 
-               style="cursor: pointer;">
-            </i>
-            <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-3" aria-labelledby="filterDropdown">
-                <li><h6 class="dropdown-header">Sortiraj po:</h6></li>
-                <li><a class="dropdown-item" href="#" onclick="console.log('Sortiranje po ceni...')"><i class="bi bi-sort-numeric-down me-2"></i>Sort by price</a></li>
-                <li><a class="dropdown-item" href="#" onclick="console.log('Sortiranje po popularnosti...')"><i class="bi bi-fire me-2"></i>Sort by popularity</a></li>
-            </ul>
-        </div>
-    </div>
 
-    <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item d-flex align-items-start border-0 py-3 px-0" onclick="showPage('home')">
-            <i class="bi bi-star me-3"></i><div><h6 class="mb-0 fw-bold">Kitchen equipment</h6><small class="text-muted">shop for kitchen</small></div>
-        </a>
-        <a href="#" class="list-group-item d-flex align-items-start border-0 py-3 px-0" onclick="showPage('login')">
-            <i class="bi bi-person me-3"></i><div><h6 class="mb-0 fw-bold">Register</h6><small class="text-muted">Create an account</small></div>
-        </a>
-    </div>
-</section>
+        <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item d-flex align-items-start border-0 py-3 px-0" onclick="showPage('home')">
+                <i class="bi bi-star me-3"></i><div><h6 class="mb-0 fw-bold">Kitchen equipment</h6><small class="text-muted">shop for kitchen</small></div>
+            </a>
+            <a href="#" class="list-group-item d-flex align-items-start border-0 py-3 px-0" onclick="showPage('login')">
+                <i class="bi bi-person me-3"></i><div><h6 class="mb-0 fw-bold">Register & Profile</h6><small class="text-muted">Create an account</small></div>
+            </a>
+        </div>
+    </section>
 
     <section id="product-detail" class="page-section container py-3">
         <div class="position-relative mb-4 bg-light rounded-4 text-center p-5">
             <button class="btn btn-dark position-absolute top-0 start-0 m-3 rounded-circle" onclick="showPage('home')"><i class="bi bi-arrow-left"></i></button>
-			<button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" 
-        style="width: 45px; height: 45px;" 
-        onclick="toggleWishlist(this)">
-    <i class="bi bi-heart fs-5"></i>
-</button>
+            <button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;" onclick="toggleWishlist(this)"><i class="bi bi-heart fs-5"></i></button>
             <img src="slike/airfryer.jpg" class="img-fluid" alt="Product">
         </div>
         <h3 class="fw-bold">Air Fryer Sigma Pro Max</h3>
@@ -213,15 +286,11 @@
         </div>
         <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('checkout')">Proceed to Checkout</button>
     </section>
-						
-	    <section id="product-detail2" class="page-section container py-3">
+
+    <section id="product-detail2" class="page-section container py-3">
         <div class="position-relative mb-4 bg-light rounded-4 text-center p-5">
             <button class="btn btn-dark position-absolute top-0 start-0 m-3 rounded-circle" onclick="showPage('home')"><i class="bi bi-arrow-left"></i></button>
-			<button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" 
-        style="width: 45px; height: 45px;" 
-        onclick="toggleWishlist(this)">
-    <i class="bi bi-heart fs-5"></i>
-</button>
+            <button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;" onclick="toggleWishlist(this)"><i class="bi bi-heart fs-5"></i></button>
             <img src="slike/cooker.jpg" class="img-fluid" alt="Product2">
         </div>
         <h3 class="fw-bold">Cooker pro</h3>
@@ -234,14 +303,10 @@
         <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('checkout')">Proceed to Checkout</button>
     </section>
 
-	    <section id="product-detail3" class="page-section container py-3">
+    <section id="product-detail3" class="page-section container py-3">
         <div class="position-relative mb-4 bg-light rounded-4 text-center p-5">
             <button class="btn btn-dark position-absolute top-0 start-0 m-3 rounded-circle" onclick="showPage('home')"><i class="bi bi-arrow-left"></i></button>
-			<button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" 
-        style="width: 45px; height: 45px;" 
-        onclick="toggleWishlist(this)">
-    <i class="bi bi-heart fs-5"></i>
-</button>
+            <button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;" onclick="toggleWishlist(this)"><i class="bi bi-heart fs-5"></i></button>
             <img src="slike/pan.jpg" class="img-fluid" alt="Product3">
         </div>
         <h3 class="fw-bold">Pan for cooking</h3>
@@ -254,14 +319,10 @@
         <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('checkout')">Proceed to Checkout</button>
     </section>
 
-	<section id="product-detail4" class="page-section container py-3">
+    <section id="product-detail4" class="page-section container py-3">
         <div class="position-relative mb-4 bg-light rounded-4 text-center p-5">
             <button class="btn btn-dark position-absolute top-0 start-0 m-3 rounded-circle" onclick="showPage('home')"><i class="bi bi-arrow-left"></i></button>
-			<button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" 
-        style="width: 45px; height: 45px;" 
-        onclick="toggleWishlist(this)">
-    <i class="bi bi-heart fs-5"></i>
-</button>
+            <button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;" onclick="toggleWishlist(this)"><i class="bi bi-heart fs-5"></i></button>
             <img src="slike/fridge.jpg" class="img-fluid" alt="Product4">
         </div>
         <h3 class="fw-bold">Fridge</h3>
@@ -274,14 +335,10 @@
         <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('checkout')">Proceed to Checkout</button>
     </section>
 
-	<section id="product-detail5" class="page-section container py-3">
+    <section id="product-detail5" class="page-section container py-3">
         <div class="position-relative mb-4 bg-light rounded-4 text-center p-5">
             <button class="btn btn-dark position-absolute top-0 start-0 m-3 rounded-circle" onclick="showPage('home')"><i class="bi bi-arrow-left"></i></button>
-			<button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" 
-        style="width: 45px; height: 45px;" 
-        onclick="toggleWishlist(this)">
-    <i class="bi bi-heart fs-5"></i>
-</button>
+            <button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;" onclick="toggleWishlist(this)"><i class="bi bi-heart fs-5"></i></button>
             <img src="slike/dwash.jpg" class="img-fluid" alt="Product5">
         </div>
         <h3 class="fw-bold">Dishwasher</h3>
@@ -294,17 +351,13 @@
         <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('checkout')">Proceed to Checkout</button>
     </section>
 
-<section id="product-detail6" class="page-section container py-3">
+    <section id="product-detail6" class="page-section container py-3">
         <div class="position-relative mb-4 bg-light rounded-4 text-center p-5">
             <button class="btn btn-dark position-absolute top-0 start-0 m-3 rounded-circle" onclick="showPage('home')"><i class="bi bi-arrow-left"></i></button>
-			<button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" 
-        style="width: 45px; height: 45px;" 
-        onclick="toggleWishlist(this)">
-    <i class="bi bi-heart fs-5"></i>
-</button>
+            <button class="btn btn-dark position-absolute top-0 end-0 m-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;" onclick="toggleWishlist(this)"><i class="bi bi-heart fs-5"></i></button>
             <img src="slike/bin.jpg" class="img-fluid" alt="Product6">
         </div>
-        <h3 class="fw-bold">bin</h3>
+        <h3 class="fw-bold">Bin</h3>
         <span class="badge bg-success-subtle text-success rounded-pill mb-3 px-3 py-2">20% Discounted</span>
         <div class="display-5 fw-bold mb-4">$19.99</div>
         <div class="mb-4">
@@ -314,18 +367,74 @@
         <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('checkout')">Proceed to Checkout</button>
     </section>
 
-
     <section id="login" class="page-section container py-5">
-        <h4 class="fw-bold mb-4">Register</h4>
-        <div class="mb-3"><label class="small fw-bold">Email</label><input type="email" class="form-control rounded-3" placeholder="Email or ID"></div>
-        <div class="mb-3"><label class="small fw-bold">Password</label><input type="password" class="form-control rounded-3" placeholder="Password"></div>
-        <div class="form-check mb-4">
-            <input class="form-check-input border-dark" type="checkbox" id="c1">
-            <label class="form-check-label small" for="c1">I am human<br><span class="text-muted">Confirm you're not a robot</span></label>
+        <div class="d-flex align-items-center mb-4">
+            <button class="btn btn-light border btn-sm rounded-circle me-3" onclick="showPage('home')"><i class="bi bi-arrow-left"></i></button>
+            <h4 class="fw-bold mb-0">Kreiranje korisničkog naloga</h4>
         </div>
-        <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('reg-success')">
-		Register
-		</button>
+        
+        <form onsubmit="event.preventDefault(); showPage('reg-success');">
+            <div class="mb-3">
+                <label class="form-label small fw-bold">Korisničko ime (Tekst)</label>
+                <input type="text" class="form-control rounded-3" placeholder="Unesite username" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label small fw-bold">Email adresa</label>
+                <input type="email" class="form-control rounded-3" placeholder="name@example.com" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label small fw-bold">Godine starosti (Broj)</label>
+                <input type="number" class="form-control rounded-3" min="15" max="100" placeholder="Npr. 18">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label small fw-bold">Datum rođenja (Datum)</label>
+                <input type="date" class="form-control rounded-3">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label small fw-bold">Omiljena kategorija proizvoda</label>
+                <select class="form-select rounded-3">
+                    <option selected>Izaberite opciju...</option>
+                    <option value="1">Bela tehnika</option>
+                    <option value="2">Kuhinjski pribor</option>
+                    <option value="3">Sistemi za odlaganje</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label small fw-bold d-block">Pol</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="polOptions" id="polM" value="m">
+                    <label class="form-check-label small" for="polM">Muški</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="polOptions" id="polZ" value="z">
+                    <label class="form-check-label small" for="polZ">Ženski</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="budzetRange" class="form-label small fw-bold">Planirani mesečni budžet (Opseg)</label>
+                <input type="range" class="form-range" min="0" max="1000" step="50" id="budzetRange">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label small fw-bold">Napomena ili posebni zahtevi (Duži tekst)</label>
+                <textarea class="form-control rounded-3" rows="3" placeholder="Napišite nešto o sebi..."></textarea>
+            </div>
+
+            <div class="form-check mb-4">
+                <input class="form-check-input border-dark" type="checkbox" id="c1" required>
+                <label class="form-check-label small" for="c1">
+                    Prihvatam uslove korišćenja sajta i potvrđujem verodostojnost podataka.
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-dark w-100 py-3 rounded-3">Registruj se</button>
+        </form>
     </section>
 
     <section id="checkout" class="page-section container py-4">
@@ -350,61 +459,42 @@
         <p class="text-muted mb-5">You can now go back to main page</p>
         <button class="btn btn-dark py-3 rounded-3" onclick="showPage('home')">Back to home</button>
     </section>
-	<section id="reg-success" class="page-section vh-100 d-flex flex-column justify-content-center text-center px-4" style="display: none;">
-    <h2 class="fw-bold mb-2">You successfully registered</h2>
-    <p class="text-muted mb-5">You can now go back to main page</p>
-    
-    <div class="px-2">
-        <button class="btn btn-dark w-100 py-3 rounded-3" onclick="showPage('home')">
-            Back to home
-        </button>
-    </div>
-	</section>
+
     <script>
-	function showPage(pageId) {
-    // 1. Prvo sakrij SVE sekcije i resetuj njihov display
-    const sections = document.querySelectorAll('.page-section');
-    sections.forEach(section => {
-        section.classList.remove('active-section');
-        section.style.setProperty('display', 'none', 'important');
-    });
+        function showPage(pageId) {
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active-section');
+                section.style.setProperty('display', 'none', 'important');
+            });
 
-    // 2. Pronađi stranicu koju želimo da prikažemo
-    const target = document.getElementById(pageId);
-
-    if (target) {
-        // 3. Dodaj joj klasu za aktivnost
-        target.classList.add('active-section');
-
-        // 4. Ako stranica koristi d-flex (kao reg-success), prikaži je kao flex, inače kao block
-        if (target.classList.contains('d-flex')) {
-            target.style.setProperty('display', 'flex', 'important');
-        } else {
-            target.style.setProperty('display', 'block', 'important');
+            const target = document.getElementById(pageId);
+            if (target) {
+                target.classList.add('active-section');
+                if (target.classList.contains('d-flex')) {
+                    target.style.setProperty('display', 'flex', 'important');
+                } else {
+                    target.style.setProperty('display', 'block', 'important');
+                }
+            } else {
+                console.error("Greška: Stranica sa ID-jem '" + pageId + "' ne postoji!");
+            }
+            window.scrollTo(0, 0);
         }
-    } else {
-        console.error("Greška: Stranica sa ID-jem '" + pageId + "' ne postoji!");
-    }
 
-    // 5. Uvek skroluj na vrh nove stranice
-    window.scrollTo(0, 0);
-}
-	function toggleWishlist(button) {
-    const icon = button.querySelector('i');
-    
-    // Proveravamo da li je već "aktivno"
-    if (icon.classList.contains('bi-heart')) {
-        // Postaje puno i crveno
-        icon.classList.remove('bi-heart');
-        icon.classList.add('bi-heart-fill', 'active');
-    } else {
-        // Vraća se na prazno
-        icon.classList.remove('bi-heart-fill', 'active');
-        icon.classList.add('bi-heart');
-    }
-}
+        function toggleWishlist(button) {
+            const icon = button.querySelector('i');
+            if (icon.classList.contains('bi-heart')) {
+                icon.classList.remove('bi-heart');
+                icon.classList.add('bi-heart-fill', 'active');
+            } else {
+                icon.classList.remove('bi-heart-fill', 'active');
+                icon.classList.add('bi-heart');
+            }
+        }
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
